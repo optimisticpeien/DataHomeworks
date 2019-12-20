@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beauty - Minimal HTML Template</title>
+    <script src="js/echarts.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <h1><a href=""><font size="6">Vast &nbsp; Sky</font></a></h1>
+                    
+                        
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>                         
+                    </div>
+                </div>
+                
+                <div class="col-md-9">
+                    <div class="mainmenu">
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="#home">2017记录分析</a></li>
+                                <li><a href="#d2017">2017总结</a></li>
+                                <li><a href="#d2018">2018记录分析</a></li>
+                                <li><a href="#e2018">2018总结</a></li>
+                                <li><a href="#testimonials">组内成员分工</a></li>
+                                <li><a href="#contact">总结</a></li>
+                                
+                               
+                            </ul>
+                        </div>                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End header area -->
+   
+  <!-- End about us area -->
+   
+   
+   
+   
+   
+    
+    <div id="home" class="slider-area">
+        <div class="container">
+        	<div class="row">
+                <div class="col-md-8 col-md-offset-2" style="left: 40px;">
+                    <div class="page-title">
+                        <h2>2017年利润及分析<span></span> <i class="fa fa-heart-o"></i></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>  
+            <div class="row">
+            	
+                <div class="col-md-6" style="left: -60px;top: 40px;">
+                    <div class="slide-text">
+                        <h2>2017年利润分析 <span></span> </h2>
+                        <p>1.近年来，受经济下行压力影响和电商迅猛发展的双重冲击，不少行业企业反映成本上升利润下降，不少零售企业陆续关闭一些店铺。</p>
+                        <p>2.数据显示，2017年超市销售额保持增长趋势，但增长率却持续放缓。2017年超市利润总和下来达到 378.4万 ，1年间销售额达到 548.1万</p>
+                        <p>3.该超市相比较与其他行业来说，销量与营业额是增长的，且利润可观。</p>
+                        <a href="" class="readmore">刷新</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="slide-image">
+        <div id="col-md-6" style="width: 750px;height: 450px;top:-30px; left: -10px;">
+			<script>
+				var mc = echarts.init(document.getElementById('col-md-6'));
+				var option ={
+    tooltip: {
+        trigger: "axis"
+    },
+    legend: {
+        data: ["营业额", "成本", "利润"],
+        padding: 30,
+        borderColor: "#ccc"
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: true
+            },
+            magicType: {
+                show: false,
+                type: ["line", "bar", "stack", "tiled"]
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    calculable: true,
+    xAxis: [
+        {
+            type: "category",
+            boundaryGap: false,
+            data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+        }
+    ],
+    yAxis: [
+        {
+            type: "value"
+        }
+    ],
+    series: [
+        {
+            name: "营业额",
+            type: "line",
+            stack: "总量",
+            itemStyle: {
+                normal: {
+                    color: "rgb(76, 76, 76)",
+                    lineStyle: {
+                        color: "rgb(76, 76, 76)"
+                    },
+                    areaStyle: {
+                        type: "default"
+                    },
+                    borderColor: "rgb(76, 76, 76)",
+                    borderWidth: 5,
+                    label: {
+                        show: false
+                    }
+                }
+            },
+            data: [183319.28, 179622.52, 227988.2, 304971.75, 424665.42, 423473.3, 565487.15, 639403.39, 638459.09, 617387.36, 582224.94, 694151.67],
+            symbol: "star"
+        },
+        {
+            name: "成本",
+            type: "line",
+            stack: "总量",
+            itemStyle: {
+                normal: {
+                    color: "rgb(255, 0, 0)",
+                    lineStyle: {
+                        color: "rgb(255, 0, 0)"
+                    },
+                    borderColor: "rgb(255, 0, 0)",
+                    areaStyle: {
+                        type: "default"
+                    },
+                    borderWidth: 5
+                },
+                emphasis: {
+                    color: "rgb(0, 191, 95)"
+                }
+            },
+            data: [48767, 51616.1, 68288.24, 87498.66, 122251.92, 137447.26, 165485.86, 203285.04, 200567.7, 183079.8, 169538.01, 233327.03],
+            symbol: "arrow"
+        },
+        {
+            name: "利润",
+            type: "line",
+            stack: "总量",
+            itemStyle: {
+                normal: {
+                    areaStyle: {
+                        type: "default"
+                    },
+                    color: "rgb(255, 0, 255)",
+                    lineStyle: {
+                        color: "rgb(255, 86, 255)"
+                    },
+                    borderColor: "rgb(255, 86, 255)",
+                    borderWidth: 5
+                }
+            },
+            data: [134552.3, 128006.42, 134552.28, 217473.09, 302413.5, 286026.04, 400001.29, 436118.35, 437891.39, 434307.56, 412686.93, 460824.64],
+            symbol: "triangle"
+        }
+    ],
+    title: {
+        text: "超市2017年利润",
+        x: "center",
+        padding: 2
+    }
+};
+				mc.setOption(option);
+			</script>
+		</div>
+		
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End slider area -->
+    
+    <div id="about-us" class="about-area">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2" style="left: 40px;">
+                    <div class="page-title">
+                        <h2>2017年利润率及分析<span></span> <i class="fa fa-heart-o"></i></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>           
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="about-photo">
+                        <div id="row" style="width: 750px;height: 450px;top:0px; left: -100px;">
+			<script>
+				var mc = echarts.init(document.getElementById('row'));
+				var option ={
+    title: {
+        text: "超市2017年利润率",
+        subtext: "",
+        x: "center"
+    },
+    tooltip: {
+        trigger: "item",
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        x: "center",
+        y: "bottom",
+        data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+        padding: 0,
+        borderColor: "#ccc"
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: true
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    calculable: true,
+    series: [
+        {
+            name: "利润率",
+            type: "pie",
+            radius: [30, 90],
+            center: ["50%", "50%"],
+            roseType: "area",
+            data: [
+                {
+                    value: 0.712641266,
+                    name: "1月"
+                },
+                {
+                    value: 0.590172123,
+                    name: "2月"
+                },
+                {
+                    value: 0.713092573,
+                    name: "3月"
+                },
+                {
+                    value: 0.712121792,
+                    name: "4月"
+                },
+                {
+                    value: 0.675428746,
+                    name: "5月"
+                },
+                {
+                    value: 0.707356993,
+                    name: "6月"
+                },
+                {
+                    value: 0.68207075,
+                    name: "7月"
+                },
+                {
+                    value: 0.685856615,
+                    name: "8月"
+                },
+                {
+                    value: 0.703460401,
+                    name: "9月"
+                },
+                {
+                    value: 0.708810121,
+                    name: "10月"
+                },
+                {
+                    value: 0.663867365,
+                    name: "11月"
+                },
+                {
+                    value: 0.695109351,
+                    name: "12月"
+                }
+            ]
+        }
+    ]
+};
+				mc.setOption(option);
+			</script>
+		</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5" style="left: 100px;">
+                    <div class="about-text">
+                    	
+                        <h3>2017年利润率分析 <span></span></h3>
+                        <p>1.本年度各月利润率趋于平均，由此我们可以看出，本超市的销售额和利润也是趋于平缓，没有太大浮动，说明本年度收入较之于其它行业已经算是处于领先地位。</p>
+                        <p>2.再加上随着社会的进步，各行业对商业的冲击，我们仍然可以处于平均收入，不赢不亏，则可以说明超市是个稳定收入的行业，社会经济冲击对它的影响不大。</p>
+                        <p></p>
+                       
+                        
+                        <a href="" class="readmore">回到顶部并刷新</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End about us area -->
+    
+    <div id="home" class="slider-area">
+        <div class="container">
+        	<div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-title">
+                        <h2>2017年商品分类<span></span> <i class="fa fa-heart-o"></i></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        	
+            <div class="row" style="left: -100px;">
+                <div class="col-md-6" style="left: -100px;">
+                    <div class="slide-text" style="left: -100px;">
+                        <h2>2017年商品分类分析 <span></span> </h2>
+                        <p>1.本年度其它商品销量最佳，营业额达到最佳。除此之外，日<br/>配、冷饮和食品粮油的销量最好，文化用品相比较而言就比较<br/>少了，由此可见，本超市可以在原来的商品基础上多进一些其<br/>它商品，进而提高营业额。</p>
+                        <p>2.根据图表显示2017年营业额，最多和最少相差太多，由此我<br/>们可以看出客户在对商品的需求量上，日配和粮油占了大部分，<br/>由此可见，本超市应该在日常用品上多添加种类，用来吸引消<br/>费者的消费欲望，进而提高营业额。</p>
+                        <p></p>
+                        <a href="" class="readmore">回到顶部并刷新</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="slide-image">
+        <div id="slide-image" style="width: 950px;height: 450px;top: -40px;left: -210px;">
+			<script>
+				var mc = echarts.init(document.getElementById('slide-image'));
+				var option ={
+    title: {
+        text: "2017年各类商品营业额",
+        subtext: "",
+        x: "center"
+    },
+    tooltip: {
+        trigger: "axis"
+    },
+    legend: {
+        data: ["营业额/元"],
+        x: "center",
+        y: 35,
+        orient: "horizontal"
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: true
+            },
+            magicType: {
+                show: false,
+                type: ["line", "bar"]
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    calculable: true,
+    xAxis: [
+        {
+            type: "category",
+            data: ["其它", "日配/冷藏", "粮油副食", "日化用品", "酒水饮料", "休闲食品", "水果/蔬菜", "肉品", "个洗清洁", "进口商品", "居家日用"]
+        }
+    ],
+    yAxis: [
+        {
+            type: "value"
+        }
+    ],
+    series: [
+        {
+            type: "bar",
+            name: "营业额/元",
+            data: [3914154.52, 2303345.43, 1674419.71, 473137.26, 480121.17, 329042.37, 328821.79, 314787.98, 236997.6, 184926.28, 54683.7],
+            itemStyle: {
+                normal: {
+                    color: "rgb(255, 204, 0)"
+                }
+            }
+        }
+    ]
+};
+				mc.setOption(option);
+			</script>
+		</div>
+		
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="d2017">
+    <div class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cta-text">
+                        <h2>2017年总结 <span></span></h2>
+                        <p>1.2017年营业额最好的是7、8、9三月，9月638459.09元，8月639403.39元，7月565487.15元。
+
+
+
+
+</p>
+     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     	&nbsp;&nbsp;&nbsp;&nbsp;2.2017年利润最好的是三个月分别是12月、9月、8月，它们分别是12月460824.64元，9月437891.39元，8月436118.35元。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.从表中可以看出，在2017各类商品营业额最好的三类为：日配，营业额为1303345元 ；粮油副食，营业额为1074419元 ；酒水饮料，营业额为380121元。</p>
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       	4.2017年各商品的销售量最好的是三种为：日配，销售量为65587件；粮油副食，销售量为54913件；休闲食品，销售量为31217件。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.从以上的表可以看出，顾客对于日配、粮油副食和休闲食品的需求量较大。为了增进超市的利润，本超市可以多进这些物品的量。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于销量最少商品商品和销量最佳商品有一定差距，所以，本超市可以出些优惠活动，用以增进超市的整体营业额。</p>
+                        <a href="" class="readmore">回到顶部并刷新</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>  <!--2017年结束 -->  
+    
+    <div id="d2018">
+     <div id="home" class="slider-area">
+        <div class="container">
+        	<div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-title">
+                        <h2>2018年利润及分析<span></span> <i class="fa fa-heart-o"></i></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6" style="left: -60px;top: -40px;">
+                    <div class="slide-text">
+                        <h2>2018年利润分析 <span></span> </h2>
+                        <p>1.近年来，受经济下行压力影响和电商迅猛发展的双重冲击，不少行业企业反映成本上升利润下降，不少零售企业陆续关闭一些店铺。2018年，百强企业销售规模同比增长3.5%，
+为有统计以来最低的一年。销售负增长企业34家，比上一年增加3家。各业态销售增幅差异明显，其中便利店增幅最高，达到16.7%，专业店和专卖店为6.5%，购物中心1.6%，
+超市和大型超市1.5%。2016年，百强企业门店总数增长近6400个，其中门店数量净增长过百的企业15家，主要是便利店和专业店，门店净增长6900余个。2018年，有36家百
+强企业门店数量比上一年有所减少，通过关闭低效门店，企业经营质量得到改善。</p>
+                        <p>2.数据显示，2018年超市销售额保持增长趋势，但增长率却持续放缓。当年销售额为1655.3万元。2018年间销售额最高的是230.3万。</p>
+                        <p>3.该超市相比较与其他行业来说，销量与营业额是增长的，且利润可观。</p>
+                        <a href="" class="readmore">回到顶部并刷新</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                <div class="slide-image">
+        <div id="main" style="width: 750px;height: 450px;top:-40px; left: 0px;">
+			<script>
+				var mc = echarts.init(document.getElementById('main'));
+				var option ={
+    tooltip: {
+        trigger: "axis"
+    },
+    legend: {
+        data: ["成本", "利润", "营业额"],
+        padding: 30,
+        borderWidth: 0
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: true
+            },
+            magicType: {
+                show: false,
+                type: ["line", "bar", "stack", "tiled"]
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    calculable: true,
+    xAxis: [
+        {
+            type: "category",
+            boundaryGap: false,
+            data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+        }
+    ],
+    yAxis: [
+        {
+            type: "value"
+        }
+    ],
+    series: [
+        {
+            type: "line",
+            itemStyle: {
+                normal: {
+                    color: "rgb(239, 28, 28)",
+                    areaStyle: {
+                        type: "default"
+                    }
+                }
+            },
+            name: "成本",
+            data: [265149.06, 191429.63, 258496.98, 373350.58, 218401.71, 273631.66, 405652.17, 590844.19, 505392.76, 588435.76, 569269.2, 807194.76],
+            symbol: "rectangle",
+            markPoint: {
+                data: []
+            },
+            symbolSize: 4
+        },
+        {
+            type: "line",
+            itemStyle: {
+                normal: {
+                    areaStyle: {
+                        type: "default"
+                    },
+                    color: "rgb(9, 150, 9)"
+                }
+            },
+            name: "利润",
+            data: [564562.71, 460155.09, 550869.6, 726028.76, 819446.02, 908532.48, 1028137.28, 1275869.05, 1173793.82, 1185475.03, 1317134.11, 1495448.25],
+            symbol: "diamond",
+            symbolSize: 4
+        },
+        {
+            type: "line",
+            itemStyle: {
+                normal: {
+                    areaStyle: {
+                        type: "default"
+                    },
+                    color: "rgb(11, 163, 163)",
+                    label: {
+                        position: "right"
+                    }
+                }
+            },
+            name: "营业额",
+            data: [829711.77, 651584.72, 809366.58, 1099379.34, 1037847.73, 1182164.14, 1433789.45, 1866713.24, 1679186.58, 1773910.79, 1886403.31, 2302643.01],
+            symbol: "star",
+            symbolSize: 4
+        }
+    ],
+    title: {
+        text: "2018年超市销售",
+        x: "center",
+        padding: 2
+    }
+}
+;
+				mc.setOption(option);
+			</script>
+		</div>
+		
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> </div><!-- End slider area -->
+    
+    <div id="about-us" class="about-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-title">
+                        <h2>2018年利润率及分析<span></span> <i class="fa fa-heart-o"></i></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>           
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="about-photo">
+<div id="d1" style="width: 750px;height: 450px;top:-20px; left: -100px;">
+			<script>
+				var mc = echarts.init(document.getElementById('d1'));
+				var option ={
+    title: {
+        text: "2018年超市利润率",
+        x: "center"
+    },
+    tooltip: {
+        trigger: "item",
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+        textStyle: {
+            fontSize: 10,
+            fontStyle: "normal",
+            color: "#333"
+        },
+        selectedMode: false,
+        x: "center",
+        y: "bottom",
+        padding: 1
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: true
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    calculable: true,
+    series: [
+        {
+            name: "营业利润率",
+            type: "pie",
+            radius: [30, 90],
+            center: ["50%", "50%"],
+            roseType: "area",
+            data: [
+                {
+                    value: 0.680432327,
+                    name: "1月"
+                },
+                {
+                    value: 0.706209148,
+                    name: "2月"
+                },
+                {
+                    value: 0.680618169,
+                    name: "3月"
+                },
+                {
+                    value: 0.660398766,
+                    name: "4月"
+                },
+                {
+                    value: 0.789562858,
+                    name: "5月"
+                },
+                {
+                    value: 0.768533277,
+                    name: "6月"
+                },
+                {
+                    value: 0.71707689,
+                    name: "7月"
+                },
+                {
+                    value: 0.683484224,
+                    name: "8月"
+                },
+                {
+                    value: 0.699025251,
+                    name: "9月"
+                },
+                {
+                    value: 0.668283341,
+                    name: "10月"
+                },
+                {
+                    value: 0.698225084,
+                    name: "11月"
+                },
+                {
+                    value: 0.649448587,
+                    name: "12月"
+                }
+            ]
+        }
+    ]
+};
+				mc.setOption(option);
+			</script>
+		</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5" style="left: 100px;">
+                    <div class="about-text">
+                        <h3>2018年利润率分析 <span></span></h3>
+                        <p>1.2018年超市的总体利润来说，跟2017年对比没有太大的变化属于属于平稳增长，但由于线上o2o形式的销售形式，对线下超市的销售量的冲击力还是比较大的，但各商品带來的利润还是在平稳增长。</p>
+                        
+                        
+                       
+                        
+                        <a href="" class="readmore">回到顶部并刷新</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End about us area -->  
+    
+    <div id="home" class="slider-area">
+        <div class="container">
+        	<div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-title">
+                        <h2>2018各类商品营业额及分析<span></span> <i class="fa fa-heart-o"></i></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row"style="left: -150px;">
+                <div class="col-md-6"style="left: -150px;">
+                    <div class="slide-text" style="left: -150px;">
+                        <h2>2018各类商品营业额分析 <span></span> </h2>
+                        <p>1.2018年各类商品的销售份额相比于2017年来说，其他的商品<br/>的销量增加，营业额也在增长，但除此之外相比2017年来说的<br/>话，日配冷藏和粮油副食跟日化产品，酒水饮料等都比2017年<br/>有明显的增长。</p>
+                        <p>2.从2018年的各类商品营业额的程度来看，对比2017年来说，<br/>人均的收入得到了提高，对各个商品的也需求量更多。</p>
+                        
+                        <a href="" class="readmore">回到顶部并刷新</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="slide-image">
+  <div id="d2" style="width: 950px;height: 450px;top: -40px;left: -210px;">
+			<script>
+				var mc = echarts.init(document.getElementById('d2'));
+				var option ={
+    title: {
+        text: "2018年各类商品营业额",
+        subtext: "",
+        x: "center"
+    },
+    tooltip: {
+        trigger: "axis"
+    },
+    legend: {
+        data: ["营业额"],
+        x: "center",
+        y: 35,
+        orient: "horizontal"
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: true
+            },
+            magicType: {
+                show: false,
+                type: ["line", "bar"]
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    calculable: true,
+    xAxis: [
+        {
+            type: "category",
+            data: ["其它", "日配/冷藏", "粮油副食", "日化用品", "水果/蔬菜", "酒水饮料", "休闲食品", "肉品", "个洗清洁", "进口商品", "居家日用"]
+        }
+    ],
+    yAxis: [
+        {
+            type: "value"
+        }
+    ],
+    series: [
+        {
+            type: "bar",
+            name: "营业额",
+            data: [3917153.16, 2696522.77, 1898585.89, 1464530.78, 1135131.56, 1000709.66, 941498.05, 803611.14, 661687.08, 491690.83, 125280.86]
+        }
+    ]
+};
+				mc.setOption(option);
+			</script>
+		</div>
+		
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="e2018">
+    <div class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cta-text">
+                        <h2>2018年总结 <span></span>.</h2>
+                        <p>2018年超市商品销售总额为1655.3万元，日均客流量114人，日均客单价398元全年中12月份销售表现突出,占下全年销售份额<br/>的29.94%;虽年初第一季度销售额和利润有所降低，但二 三 四季度销售额和利润都平稳增长。</p>
+                        <a href="" class="readmore">回到顶部并刷新</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> </div> <!-- End call to action -->  
+    <div>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
+    </div>
+    </div>
+    
+   
+    
+    
+    
+    <div id="testimonials" class="testimonial-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-title">
+                        <h2>组内成员简介及此次分工<span></span> <i class="fa fa-heart-o"></i></h2>
+                        <p>我们组一共6个人，分为三个小组，第一小组两个人负责数据处理，第二小组两个人负责用处理好的数据绘制图表，第三小组两个人负责将绘制好的图表在网页中展示出来，并且优化网页页面。</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>           
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div id="testimonial-list" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+
+                            <div class="item active">
+                                <div class="single-testimonial">
+                                    <img src="img/2.png" alt="" class="author-photo"style="width: 170px;height: 200px;">
+                                    <p class="author-name">王晓琛 <span></span>座右铭：不乱于心，不困于情，不畏将来，不念过往，如此，安好。</p>
+                                    <p>第三小组成员，主要负责用绘制好的图表在网页中展示出来，其中包括网页页面的排版、布局，使其更加美观。</p>
+                                    
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+
+                        <a class="left tes-control" href="#testimonial-list" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="right tes-control" href="#testimonial-list" role="button" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>    <!-- End testimonial area -->
+    
+    
+    <div id="contact" class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-title">
+                        <h2>总结<span></span> <i class="fa fa-heart-o"></i></h2>
+                        <font size="4">
+                        <p>通过这次的合作，让我们明白了团结的力量。</p>
+                        <p>我们组分工明确，协调有度，很好的完成了各小组之间<br/>的任务交接，从而使得本次作业圆满完成。</p>
+                        <p>每个人在完成他负责的任务的同时，也从中学习到了许多东西，可谓是一举两得。</p>
+                        </font>
+                    </div>
+                </div>
+            </div>           
+            
+        </div>
+    </div> <!-- End contact area -->
+    
+    
+    
+  
+
+    <!-- Latest jQuery form server -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- Bootstrap JS form CDN -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+    <!-- jQuery sticky menu -->
+    <script src="js/jquery.sticky.js"></script>
+    
+    <!-- jQuery easing -->
+    <script src="js/jquery.easing.1.3.min.js"></script>
+    
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
